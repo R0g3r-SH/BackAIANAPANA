@@ -7,7 +7,7 @@ import fs from "fs"; // Import the fs module to read files
 
 dotenv.config();
 
-const openai = new OpenAI(process.env.OPENAI_API_KEY); // OpenAI API Key
+const openai = new OpenAI({apiKey:process.env.OPENAI_API_KEY}); // OpenAI API Key
 
 const app = express();
 app.use(cors());
